@@ -1,9 +1,10 @@
 package org.adnanarch.jobapplication.job;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface JobService {
-    ArrayList<Job> findAllJobs();
+    List<Job> findAllJobs();
     void createJob(Job job);
 
     Job findJobById(Long id);

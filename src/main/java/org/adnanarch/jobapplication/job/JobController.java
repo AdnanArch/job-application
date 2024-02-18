@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/jobs")
@@ -16,7 +17,7 @@ public class JobController {
     }
 
     @GetMapping
-    public ResponseEntity<ArrayList<Job>> getAllJobs() {
+    public ResponseEntity<List<Job>> getAllJobs() {
         return new ResponseEntity<>(jobService.findAllJobs(), HttpStatus.OK);
 
     }
