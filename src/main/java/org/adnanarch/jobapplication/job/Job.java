@@ -3,7 +3,7 @@ package org.adnanarch.jobapplication.job;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "jobs")
+//@Table(name = "jobs")
 public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

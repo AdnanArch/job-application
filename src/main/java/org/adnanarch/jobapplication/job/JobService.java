@@ -1,6 +1,5 @@
 package org.adnanarch.jobapplication.job;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public interface JobService {

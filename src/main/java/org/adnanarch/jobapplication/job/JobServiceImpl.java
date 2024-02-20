@@ -2,8 +2,6 @@ package org.adnanarch.jobapplication.job;
 
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -50,7 +48,7 @@ public class JobServiceImpl implements JobService {
             job.setTitle(updatedJob.getTitle());
             job.setDescription(updatedJob.getDescription());
             job.setMinSalary(updatedJob.getMinSalary());
-            job.setMinSalary(updatedJob.getMaxSalary());
+            job.setMaxSalary(updatedJob.getMaxSalary());
             job.setLocation(updatedJob.getLocation());
             jobRepository.save(job);
             return true;
