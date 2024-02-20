@@ -1,6 +1,7 @@
 package org.adnanarch.jobapplication.job;
 
 import jakarta.persistence.*;
+import org.adnanarch.jobapplication.company.Company;
 
 @Entity
 //@Table(name = "jobs")
@@ -14,6 +15,9 @@ public class Job {
     private double maxSalary;
     private String location;
 
+    @ManyToOne
+    private Company company;
+
     public Job() {
 
     }
@@ -25,6 +29,14 @@ public class Job {
         this.minSalary = minSalary;
         this.maxSalary = maxSalary;
         this.location = location;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     public Long getId() {
