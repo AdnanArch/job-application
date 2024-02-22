@@ -3,6 +3,7 @@ package org.adnanarch.jobapplication.company;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.adnanarch.jobapplication.job.Job;
+import org.adnanarch.jobapplication.review.Review;
 
 import java.util.List;
 
@@ -16,17 +17,10 @@ public class Company {
     @JsonIgnore
     @OneToMany(mappedBy = "company")
     private List<Job> jobList;
-
-//    private List<Review> reviewList;
+    @OneToMany(mappedBy = "company")
+    private List<Review> reviewList;
 
     public Company() {
-    }
-
-    public Company(Long id, String name, String description, List<Job> jobList) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.jobList = jobList;
     }
 
     public Long getId() {
@@ -59,5 +53,13 @@ public class Company {
 
     public void setJobList(List<Job> jobList) {
         this.jobList = jobList;
+    }
+
+    public List<Review> getReviewList() {
+        return reviewList;
+    }
+
+    public void setReviewList(List<Review> reviewList) {
+        this.reviewList = reviewList;
     }
 }

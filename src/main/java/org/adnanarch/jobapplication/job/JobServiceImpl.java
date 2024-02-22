@@ -8,7 +8,6 @@ import java.util.Optional;
 
 @Service
 public class JobServiceImpl implements JobService {
-    //    private final ArrayList<Job> jobsList = new ArrayList<>();
     JobRepository jobRepository;
 
     public JobServiceImpl(JobRepository jobRepository) {
